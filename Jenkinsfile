@@ -18,8 +18,8 @@ pipeline {
             steps {
                     sh '''
                     docker build . -t localhost:5000/helloworld-spring
-                    docker tag localhost:5000/helloworld-spring localhost:5000/hello-world-spring:${BUILD_NUMBER}
-                    docker push localhost:5000/hello-world-spring:${BUILD_NUMBER}
+                    docker tag localhost:5000/helloworld-spring localhost:5000/helloworld-spring:${BUILD_NUMBER}
+                    docker push localhost:5000/helloworld-spring:${BUILD_NUMBER}
                     '''
             }
         }
