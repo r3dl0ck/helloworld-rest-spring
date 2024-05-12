@@ -28,7 +28,7 @@ pipeline {
                     input message: 'Confirm to deploy new app version? (Click "Proceed" to continue)'
                     sh '''
                     docker rm -f helloworld-spring
-                    docker run -it  --name helloworld-spring -p 9001:8080 localhost:5000/helloworld-spring:${BUILD_NUMBER}
+                    docker run -d --name helloworld-spring -p 9001:8080 localhost:5000/helloworld-spring:${BUILD_NUMBER}
                     '''
             }
         }
